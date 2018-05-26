@@ -33,7 +33,7 @@ class InMemoryDb extends Actor {
     val (key, value, senderRef) = (cmd.key, cmd.value, cmd.sender)
     logger.info(s"[server] received Set command - key: $key value: $value")
     map.put(key, value)
-    senderRef ! Status.Success()
+    senderRef ! Status.Success
   }
 
   def handleGet(cmd: Get): Unit = {
