@@ -8,11 +8,13 @@ lazy val akkaVersion = "2.5.12"
 lazy val akkaTypedVersion = "2.5.8"
 
 lazy val commonDependencies = Seq(
-  "com.typesafe.akka" %% "akka-typed" % akkaTypedVersion,
-  "com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-typed" % akkaTypedVersion,
+  "com.typesafe.akka" %% "akka-actor" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
   "com.typesafe.akka" %% "akka-remote" % akkaVersion,
   "org.scalatest" %% "scalatest" % "3.0.1" % Test,
-  "com.typesafe.akka" %% "akka-testkit-typed" % akkaVersion % Test
+  "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test
+  //"com.typesafe.akka" %% "akka-testkit-typed" % akkaVersion % Test
 )
 
 lazy val commons = project
